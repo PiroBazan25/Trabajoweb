@@ -17,5 +17,9 @@ meriendas.forEach(function(merienda) {
 });
 
 botonContar.addEventListener("click", function() {
-    resultadoContador.textContent = "Hay " + meriendas.length + " meriendas en la lista.";
+    if (meriendas.length > 0) {
+        resultadoContador.textContent = "Hay " + meriendas.length + " meriendas en la lista.";
+    } else {
+        resultadoContador.textContent = "No hay meriendas cargadas.";
+    }
 });
